@@ -1,5 +1,8 @@
 FROM        azul/zulu-openjdk:8
 
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' >/etc/timezone
+
 LABEL       author="Software-noob" maintainer="admin@softwarenoob.com"
 ENV         DEBIAN_FRONTEND noninteractive
 
